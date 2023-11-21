@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 400px;
+        /* width: 1000px; */
+        background-color: #fb7813;
+        margin: 10px;
+        border: 2px solid black;
+        display: flex;
+        overflow: scroll;
+      }
+      /* .container {
+        background-color: beige;
+        border: 5px solid black;
+        margin: 2px;
+        padding: 2px;
+        display: flex;
+        flex-direction: row;
+        height: 800px;
+        flex-wrap: wrap;
+      } */
+      .box {
+        height: 150px;
+        width: 150px;
+        border: 2px solid black;
+        margin: 10px;
+      }
+      .box1 {
+        background-color: #b6eb7a;
+      }
+      .box2 {
+        background-color: #781c68;
+      }
+      .box3 {
+        background-color: #319da0;
+      }
+      .box4 {
+        background-color: #7d8df6;
+      }
+      .container1 {
+        /* justify-content: center;this will place all the flex items in the center of main axis(if row its horixontal axis and if column it vertical axis) */
+        /*justify-content:end; this will place the flex item at the end of the main axis  */
+        /* justify-content:start; this will place the flex item at the start of the main axis */
+        /* justify-content: space-around;this will place the all the flex item with equal gap form left and right  */
+        /* justify-content: space-between; this will place the all the content with equal gap except the first and last one are attached to the extreme left and right repectively */
+        justify-content: space-evenly; /*sEach and every flex item have equal length of space */
+      }
+      .container2 {
+        /* flex-direction: row-reverse; this will place the box as 4 3 2 1 in horizontal way */
+        /* flex-direction: column;this will place the box as 1 2 3 4 vertically */
+        /* flex-direction:column-reverse; this will place the box as 4 3 2 1 vertically */
+        /* flex-wrap: nowrap; this will not allow to move the flex-item to the next line if there is no space for the flex-item and it will only shrink the flex-item */
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is for flex-direction</h1>
+    <div class="container1 container">
+      <div class="box1 box">box1</div>
+      <div class="box2 box">box2</div>
+      <div class="box3 box">box3</div>
+      <div class="box4 box">box4</div>
+    </div>
+    <h1>this is for flex-flow</h1>
+    <div class="container2 container">
+      <div class="box1 box">box1</div>
+      <div class="box2 box">box2</div>
+      <div class="box3 box">box3</div>
+      <div class="box4 box">box4</div>
+    </div>
+    <h1>this is for justify property</h1>
+    <div class="container3 container">
+      <div class="box1 box">box1</div>
+      <div class="box2 box">box2</div>
+      <div class="box3 box">box3</div>
+      <div class="box4 box">box4</div>
+    </div>
+    <h1>this is for align property</h1>
+    <div class="container4 container">
+      <div class="box1 box">box1</div>
+      <div class="box2 box">box2</div>
+      <div class="box3 box">box3</div>
+      <div class="box4 box">box4</div>
+    </div>
+  </body>
+</html>
