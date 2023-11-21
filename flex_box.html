@@ -17,7 +17,7 @@
         margin: 10px;
         border: 2px solid black;
         display: flex;
-        overflow: scroll;
+        /* overflow: scroll; */
       }
       /* .container {
         background-color: beige;
@@ -56,12 +56,21 @@
         justify-content: space-evenly; /*sEach and every flex item have equal length of space */
       }
       .container2 {
+        height: 700px;
+        flex-direction: column;
+        /* align-content: start; */
         /* flex-direction: row-reverse; this will place the box as 4 3 2 1 in horizontal way */
         /* flex-direction: column;this will place the box as 1 2 3 4 vertically */
         /* flex-direction:column-reverse; this will place the box as 4 3 2 1 vertically */
         /* flex-wrap: nowrap; this will not allow to move the flex-item to the next line if there is no space for the flex-item and it will only shrink the flex-item */
-        flex-direction: row;
+        /* flex-direction: row; */
         flex-wrap: wrap;
+        /* flex-wrap: wrap; this will wrap the content to downwards while the screen starts to shrink*/
+        /* flex-wrap: wrap-reverse; this will wrap the content to upwards */
+      }
+      .container3 .box1 {
+        /* flex-grow: 1; flex grow property will firststrech the flext item to fit its parent container and it will grow open expanding the container with mentioned speed  */
+        /* flex-shrink: 3; flex shrink will shrink  */
       }
     </style>
   </head>
@@ -79,8 +88,11 @@
       <div class="box2 box">box2</div>
       <div class="box3 box">box3</div>
       <div class="box4 box">box4</div>
+      <div class="box1 box">box1</div>
+      <div class="box2 box">box2</div>
+      <div class="box3 box">box3</div>
     </div>
-    <h1>this is for justify property</h1>
+    <h1>this is for flex-grow and shrink property</h1>
     <div class="container3 container">
       <div class="box1 box">box1</div>
       <div class="box2 box">box2</div>
