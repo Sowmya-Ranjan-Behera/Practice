@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        background-color: #856c8b;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        background-color: #d4ebd0;
+        height: 170px;
+        width: 170px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+        box-shadow: 5px 0px red; /* first will move the shadow in x direction and 2nd will move the box in y axis*/
+      }
+      .text {
+        color: yellow;
+        text-shadow: 7px 7px 5px black; /*Same values are applied to text-shadow also*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <p class="text">Hi there how are you</p>
+      </div>
+    </div>
+  </body>
+</html>
