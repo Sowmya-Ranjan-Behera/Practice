@@ -1,42 +1,99 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      .container {
-        background-color: #ca4e79;
-        height: 100vh;
-        width: 100%;
+      /* .container {
+        height: 300px;
+        width: 1000px;
+        background-color: aqua;
+        border: 2px solid brown;
         display: flex;
-        justify-content: center;
-        align-items: center;
       }
       .box {
-        height: 400px;
-        width: 400px;
-        background-color: #ffc18e;
+        background-color: rebeccapurple;
+        border: 2px solid white;
+        height: 150px;
+        width: 150px;
+      } */
+      #main {
+        width: 250px;
+        height: 200px;
+        border: 1px solid #c3c3c3;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-wrap: wrap;
       }
-      .center {
-        border: 3px solid black;
-        height: 100px;
+
+      #main div {
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: beige;
+        border: 5px solid black;
+        margin: 2px;
+        padding: 2px;
+        display: flex;
+        flex-direction: row;
+        height: 800px;
+        flex-wrap: wrap;
+      }
+      .box {
+        height: 200px;
+        width: 200px;
+        border: 2px solid brown;
+        margin: 2px;
+        padding: 2px;
+      }
+      #box1 {
+        background-color: aqua;
+        /* order: 500; */
+        /* flex-shrink: 4; */
+        /* flex-grow: 1; */
+        /* align-self: end; */
+      }
+      #box2 {
+        background-color: blue;
+        /* flex-grow: 1; */
+      }
+      #box3 {
+        background-color: orange;
+        /* flex-grow: 1; */
+      }
+      #box4 {
+        background-color: brown;
+        /* order: -1; */
+        /* flex-grow: 1; */
+        /* flex-basis: 400px; */
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="box">
-        <p>This is para graph</p>
-      </div>
+      <div class="box" id="box1">Box 1</div>
+      <div class="box" id="box2">Box 2</div>
+      <div class="box" id="box3">Box 3</div>
+      <div class="box" id="box4">Box 4</div>
     </div>
   </body>
 </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        background-color: #faf4ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+      }
+      .container p {
+        border: 1px solid black;
+        margin: 10px;
+      }
+      .sub-container {
+        display: flex;
+        flex-direction: column;
+      }
+      .image {
+        height: 280px;
+        width: 200px;
+        border: 1px solid black;
+        margin: 10px;
+      }
+      @media (min-width: 700px) {
+        .container {
+          flex-direction: row;
+        }
+      }
+      @media (max-width: 700px) {
+        .container {
+          flex-direction: column-reverse;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sub-container">
+        <p>Hi There</p>
+        <p>My name is Sowmya</p>
+      </div>
+      <img
+        src="/Practice/IMG_20230710_131633 1.jpg"
+        alt="profile"
+        class="image"
+      />
+    </div>
+  </body>
+</html>

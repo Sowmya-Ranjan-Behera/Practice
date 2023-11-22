@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 100vh;
+        width: 100vw;
+        background-color: #1b4b4d;
+        border: 2px solid yellow;
+      }
+      .box1 {
+        height: 50px;
+        width: 250px;
+        margin: 5px;
+        border: 2px solid blue;
+        position: relative;
+        /* So animation is the super entity of transition. transition only defines one way movement but animation defines multiple path */
+        /* for animation you no need to hover the mouse pointer to carry it */
+        animation-name: rightMovement;
+        animation-direction: alternate;
+        animation-duration: 3s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      @keyframes rightMovement {
+        from {
+          top: 10px;
+          left: 10px;
+          background-color: #f3f66f;
+        }
+
+        to {
+          top: 10px;
+          left: 1000px;
+          background-color: #2f4bff;
+        }
+      }
+      .box2 {
+        height: 50px;
+        width: 50px;
+
+        border: 2px solid blue;
+        background-color: yellow;
+        border-radius: 100%;
+        position: relative;
+        animation-name: circleMovement; /*animation-name: declares the name of the @keyframes at-rule to manipulate.*/
+        animation-duration: 5s; /*the length of time it takes for an animation to complete one cycle.*/
+        animation-delay: none; /*the time between the element being loaded and the start of the animation sequence*/
+        animation-iteration-count: infinite; /*the number of times the animation should be performed.*/
+        animation-timing-function: ease-out; /*Equal to cubic-bezier(0, 0, 0.58, 1.0), starts quickly, slowing down the animation continues.*/
+        animation-timing-function: ease-in-out; /*Equal to cubic-bezier(0.42, 0, 0.58, 1.0), with the animating properties slowly transitioning, speeding up, and then slowing down again.*/
+        animation-timing-function: ease; /*Equal to cubic-bezier(0.25, 0.1, 0.25, 1.0), the default value, increases in velocity towards the middle of the animation, slowing back down at the end.*/
+        animation-timing-function: ease-in; /*Equal to cubic-bezier(0.42, 0, 1.0, 1.0), starts off slowly, with the speed of the transition of the animating property increasing until complete*/
+      }
+      @keyframes circleMovement {
+        0% {
+          top: 20px;
+          left: 20px;
+          background-color: yellow;
+        }
+        20% {
+          top: 20px;
+          left: 1150px;
+          background-color: yellow;
+        }
+        50% {
+          top: 400px;
+          left: 1150px;
+          background-color: #e8984a;
+        }
+        70% {
+          top: 400px;
+          left: 60px;
+          background-color: aquamarine;
+        }
+        90% {
+          top: 200px;
+          left: 50%;
+          background-color: #412525;
+        }
+        100% {
+          top: 20px;
+          left: 20px;
+          background-color: #ff6600;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1"></div>
+      <div class="box2"></div>
+    </div>
+  </body>
+</html>
