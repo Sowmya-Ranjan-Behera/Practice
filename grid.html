@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0"
+      />
+      <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+         body {
+            height: 100vh;
+            width: 100vw;
+         }
+         .container {
+            height: 100%;
+            width: 100%;
+            background-color: #393c83;
+            display: grid;
+            gap: 10px;
+            padding: 20px;
+
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+         }
+         .box {
+            height: 100px;
+            width: 100px;
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: greenyellow;
+            font-size: 2rem;
+            place-self: end;
+         }
+
+         /* @media (min-width: 700px) {
+            .container {
+               grid-template-rows: repeat(4, 1fr);
+               grid-template-columns: repeat(3, 1fr);
+            }
+            .header {
+               grid-column-start: 1;
+               grid-column-end: 4;
+            }
+            .sidebar {
+               grid-row-start: 2;
+               grid-row-end: 4;
+            }
+            #item1 {
+               grid-column-start: 2;
+               grid-column-end: 4;
+            }
+            .footer {
+               grid-column-start: 1;
+               grid-column-end: 4;
+            }
+         } */
+      </style>
+      <title>Grid</title>
+   </head>
+   <body>
+      <div class="container">
+         <div class="box header">Header</div>
+         <div class="box sidebar">Sidebar</div>
+         <div class="box" id="item1">item1</div>
+         <div class="box">item2</div>
+         <div class="box">item3</div>
+         <div class="box footer">footer</div>
+      </div>
+   </body>
+</html>
