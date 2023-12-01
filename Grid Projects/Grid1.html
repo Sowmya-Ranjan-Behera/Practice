@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0"
+      />
+      <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+         .container {
+            background-color: maroon;
+            height: 500px;
+            width: 50%;
+            margin: 30px auto;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 20px;
+         }
+         .box {
+            background-color: orange;
+         }
+         .container > div:nth-child(1) {
+            grid-column: 1 / span 2;
+            grid-row: span 3;
+         }
+         .container > div:nth-child(2) {
+            background-color: red;
+         }
+         .container > div:nth-child(3) {
+            grid-column: 2 / span 2;
+            height: 300px;
+         }
+         .container > div:nth-child(4) {
+            grid-column: 1 / span 3;
+         }
+         .container > div:nth-child(5) {
+            grid-column: span 2;
+         }
+         .container > div:nth-child(6) {
+            grid-column: span 4;
+         }
+      </style>
+      <title>Grid in details</title>
+   </head>
+   <body>
+      <div class="container">
+         <div class="box">A</div>
+         <div class="box">B</div>
+         <div class="box">C</div>
+         <div class="box">D</div>
+         <div class="box">E</div>
+         <div class="box">F</div>
+      </div>
+   </body>
+</html>

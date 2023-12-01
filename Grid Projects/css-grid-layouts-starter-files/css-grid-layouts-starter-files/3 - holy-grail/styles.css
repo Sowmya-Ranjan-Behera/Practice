@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+}
+ul, li {
+  padding: 0;
+  list-style-type: none;
+}
+.container{
+  display: grid;
+ 
+  grid-template-columns: 1fr 3fr 1fr;
+  
+}
+header{
+ 
+  grid-column: span 3;
+  text-align: center;
+  border-bottom: 1px solid gainsboro;
+  padding: 10px;
+}
+
+nav{
+  padding: 30px;
+  border-right: 1px solid gainsboro;
+  line-height: 40px;
+}
+nav p{
+  font-size: 1.3rem;
+}
+nav ul li{
+  text-decoration: underline;
+  color: rgb(81, 79, 79);
+}
+main{
+  padding: 30px;
+}
+.article{
+  padding: 30px 10px;
+}
+main img{
+  width: 100%;
+}
+.article p{
+  text-align: justify;
+  line-height: 30px;
+  color: rgb(81, 79, 79);
+}
+aside{
+
+  padding: 30px;
+  border-left: 1px solid gainsboro;
+}
+footer{
+  grid-column: span 3;
+  text-align: center;
+  border-top: 1px solid gainsboro;
+  padding: 10px;
+  color: rgb(81, 79, 79);
+}
+
+
+
+/* Responsive */
+
+@media screen and (max-width:1250px) {
+
+  nav{
+    grid-column: span 3;
+
+    text-align: center;
+    border-bottom: 1px solid gainsboro;
+  }
+  nav ul li{
+    margin-left: 20px;
+    display: inline-block;
+  }
+  main{
+    grid-column: span 2;
+    text-align: center;
+  }
+  aside,main{
+    padding: 16px;
+  }
+
+}
+@media screen and (max-width:900px) {
+  main{
+    grid-column: span 3;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid gainsboro;
+  }
+  aside{
+    grid-column: span 3;
+    margin: 0px auto;
+    border: none;
+  }
+  aside ul li{
+    display: inline-block;
+    text-align: center;
+    padding: 3px;
+  }
+  nav{
+    padding: 15px;
+  }
+}
+@media screen and (max-width:600px) {
+  nav ul li{
+    display: block;
+  }
+}
+@media screen and (max-width:450px) {
+  aside ul li{
+    display: block;
+  }
+}
